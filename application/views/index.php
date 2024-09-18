@@ -90,11 +90,11 @@
     </div>
 
     <div class="clearfix">
-
+        <h2>Новости</h2>
             <div class="md-col md-col-6 lg-col-4 p2">
                 <?php
-                // echo('<h2>Новости</h2>');
-                // $result = $mysqli->query("SELECT DISTINCT `unews`.`id_unews`, `unews`.`utitle`, `unews`.`udescription`, `unews`.`textunews`,`uphotonews`.`uphotonews` FROM `unews` INNER JOIN `uphotonews` ON `unews`.`id_unews` = `uphotonews`.`id_unews` LIMIT 3");
+                
+                
                 // $count = $result->num_rows;
                 // while($row = $result->fetch_array()){
                 //     $img = base64_encode($row['uphotonews']);
