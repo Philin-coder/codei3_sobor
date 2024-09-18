@@ -92,82 +92,91 @@
     <div class="clearfix">
 
             <div class="md-col md-col-6 lg-col-4 p2">
-
                 <?php
-                echo('<h2>Новости</h2>');
-                $result = $mysqli->query("SELECT DISTINCT `unews`.`id_unews`, `unews`.`utitle`, `unews`.`udescription`, `unews`.`textunews`,`uphotonews`.`uphotonews` FROM `unews` INNER JOIN `uphotonews` ON `unews`.`id_unews` = `uphotonews`.`id_unews` LIMIT 3");
-                $count = $result->num_rows;
-                while($row = $result->fetch_array()){
-                    $img = base64_encode($row['uphotonews']);
-                    echo('<form method="POST" action="unews.php" style="margin-bottom:1%;">
-                    <input type="hidden" name="id" value="'.$row['id_unews'].'"></input>');
-                    echo('<a href="" name="link" class="block relative clearfix mb2">
-                        <div class="col col-12">');?>
-                            <img src="data:image/jpeg; base64,<?=$img?>" alt="image" class="img-fluid" layout="responsive">
+                // echo('<h2>Новости</h2>');
+                // $result = $mysqli->query("SELECT DISTINCT `unews`.`id_unews`, `unews`.`utitle`, `unews`.`udescription`, `unews`.`textunews`,`uphotonews`.`uphotonews` FROM `unews` INNER JOIN `uphotonews` ON `unews`.`id_unews` = `uphotonews`.`id_unews` LIMIT 3");
+                // $count = $result->num_rows;
+                // while($row = $result->fetch_array()){
+                //     $img = base64_encode($row['uphotonews']);
+                //     echo('<form method="POST" action="unews.php" style="margin-bottom:1%;">
+                //     <input type="hidden" name="id" value="'.$row['id_unews'].'"></input>');
+                //     echo('<a href="" name="link" class="block relative clearfix mb2">
+                //         <div class="col col-12">');
+                //back
+                //         ?>
+                             <!-- <img src="data:image/jpeg; base64,<?php//=img?>" alt="image" class="img-fluid" layout="responsive"> --> 
                             <?php
-                    echo('</div>
-                        <div class="absolute bg-white-a60 col col-12 h3 p1 media-label">
-                            '.$row['utitle'].'
-                        </div>
-                    </a>');?>
+                    // echo('</div>
+                    //     <div class="absolute bg-white-a60 col col-12 h3 p1 media-label">
+                    //         '.$row['utitle'].'
+                    //     </div>
+                    //</a>');
+                    ?>
                     <button type="submit" class="btn btn-primary" style="width:100%;">Подробнее</button>
-                    <?php echo('</form>');
-                };
-                if(isset($_POST['submit'])){
-                    $id = $_POST['id'];
-                    $_SESSION['id'] = $id;
-                    echo("<script>alert('$id')</script>");
-                    header('Location: unews.php');
-                };
-                echo('<a href="#" class="h3">Все новости</a>');
+                    <?php 
+                    //echo('</form>');
+                //};
+                // if(isset($_POST['submit'])){
+                //     $id = $_POST['id'];
+                //     $_SESSION['id'] = $id;
+                //     echo("<script>alert('$id')</script>");
+                //     header('Location: unews.php');
+                // };
+                // echo('<a href="#" class="h3">Все новости</a>');
                 ?>
             </div>
             <div class="md-col md-col-6 lg-col-4 p2">
                 <?php
-                 echo('<h2>Мероприятия</h2>');
-                 $result = $mysqli->query("SELECT events.id_events, events.caption, events.description, events.datep, events.id_uprofile, uphotoevent.id_uphotoevent, uphotoevent.uphotoevent, uprofile.ulastname, uprofile.ufirstname, uprofile.upatronymic FROM `events` INNER JOIN `uphotoevent` ON `events`.`id_events` = `uphotoevent`.`id_events` INNER JOIN `uprofile` ON `events`.`id_uprofile` = `uprofile`.`id_uprofile` LIMIT 3");
-                 $count = $result->num_rows;
-                 while($row = $result->fetch_array()){
-                     $img = base64_encode($row['uphotoevent']);
-                     echo('<form method="POST" action="events.php" style="margin-bottom:1%;">
-                     <input type="hidden" name="id" value="'.$row['id_events'].'"></input>');
-                     echo('<a href="#" class="block relative clearfix mb2">
-                         <div class="col col-12">');?>
-                             <img src="data:image/jpeg; base64,<?=$img?>" alt="image" class="img-fluid" layout="responsive">
+
+                //  echo('<h2>Мероприятия</h2>');
+                //  $result = $mysqli->query("SELECT events.id_events, events.caption, events.description, events.datep, events.id_uprofile, uphotoevent.id_uphotoevent, uphotoevent.uphotoevent, uprofile.ulastname, uprofile.ufirstname, uprofile.upatronymic FROM `events` INNER JOIN `uphotoevent` ON `events`.`id_events` = `uphotoevent`.`id_events` INNER JOIN `uprofile` ON `events`.`id_uprofile` = `uprofile`.`id_uprofile` LIMIT 3");
+                //  $count = $result->num_rows;
+                //  while($row = $result->fetch_array()){
+                //      $img = base64_encode($row['uphotoevent']);
+                //      echo('<form method="POST" action="events.php" style="margin-bottom:1%;">
+                //      <input type="hidden" name="id" value="'.$row['id_events'].'"></input>');
+                //      echo('<a href="#" class="block relative clearfix mb2">
+                         //<div class="col col-12">');
+                         ?>
+                              <!-- <img src="data:image/jpeg; base64,<?php//=$img ?>" alt="image" class="img-fluid" layout="responsive">  -->
                              <?php
-                     echo('</div>
-                         <div class="absolute bg-white-a60 col col-12 h3 p1 media-label">
-                             '.$row['caption'].'
-                         </div>
-                     </a>');?>
+
+                    //  echo('</div>
+                        //   <div class="absolute bg-white-a60 col col-12 h3 p1 media-label">
+                    //          '.$row['caption'].'
+                    //      </div>
+                    //  </a>');
+                     ?>
                      <button type="submit" class="btn btn-primary" style="width: 100%;">Подробнее</button>
-                     <?php echo('</form>');
-                 }
-                 echo('<a href="#" class="h3">Все мероприятия</a>');
+                     <?php 
+                     //echo('</form>');
+                //  }
+                //  echo('<a href="#" class="h3">Все мероприятия</a>');
                 ?>
             </div>
             <div class="md-col md-col-6 lg-col-4 p2">
             <?php
-                echo('<h2>Публикации</h2>');
-                $result = $mysqli->query("SELECT `upublic`.`id_upublic`, `upublic`.`id_uphoto`, `upublic`.`naim`, `upublic`.`uptext`, `upublic`.`id_uprofile`,`uprofile`.`ulastname`, `uprofile`.`ufirstname`, `uprofile`.`upatronymic`,`uphoto`.`id_uphoto`,`uphoto`.`uphoto` FROM `upublic` INNER JOIN `uphoto` ON `upublic`.`id_upublic` = `uphoto`.`id_upublic` INNER JOIN `uprofile` ON `upublic`.`id_uprofile` = `uprofile`.`id_uprofile` LIMIT 3");
-                $count = $result->num_rows;
-                while($row = $result->fetch_array()){
-                    $img = base64_encode($row['uphoto']);
-                    echo('<form method="POST" action="upublic.php" style="margin-bottom:1%;">
-                    <input type="hidden" name="id" value="'.$row['id_upublic'].'"></input>');
-                    echo('<a href="#" class="block relative clearfix mb2">
-                        <div class="col col-12">');?>
-                            <img src="data:image/jpeg; base64,<?=$img?>" alt="image" class="img-fluid" layout="responsive">
+                // echo('<h2>Публикации</h2>');
+                // $result = $mysqli->query("SELECT `upublic`.`id_upublic`, `upublic`.`id_uphoto`, `upublic`.`naim`, `upublic`.`uptext`, `upublic`.`id_uprofile`,`uprofile`.`ulastname`, `uprofile`.`ufirstname`, `uprofile`.`upatronymic`,`uphoto`.`id_uphoto`,`uphoto`.`uphoto` FROM `upublic` INNER JOIN `uphoto` ON `upublic`.`id_upublic` = `uphoto`.`id_upublic` INNER JOIN `uprofile` ON `upublic`.`id_uprofile` = `uprofile`.`id_uprofile` LIMIT 3");
+                // $count = $result->num_rows;
+                // while($row = $result->fetch_array()){
+                //     $img = base64_encode($row['uphoto']);
+                //     echo('<form method="POST" action="upublic.php" style="margin-bottom:1%;">
+                    // <input type="hidden" name="id" value="'.$row['id_upublic'].'"></input>');
+                    //echo('<a href="#" class="block relative clearfix mb2">
+                      //  <div class="col col-12">');?>
+                            <!-- <img src="data:image/jpeg; base64,<?//=$img?>" alt="image" class="img-fluid" layout="responsive"> -->
                             <?php
-                    echo('</div>
-                        <div class="absolute bg-white-a60 col col-12 h3 p1 media-label">
-                            '.$row['naim'].'
-                        </div>
-                    </a>');?>
+                   // echo('</div>
+                        //<div class="absolute bg-white-a60 col col-12 h3 p1 media-label">
+                          //  '.$row['naim'].'
+                       // </div>
+                    //</a>');
+                    ?>
                     <button type="submit" class="btn btn-primary" style="width:100%;">Подробнее</button>
-                    <?php echo('</form>');
-                }
-                echo('<a href="#" class="h3">Все публикации</a>');
+                    <?php //echo('</form>');
+                //}
+                //echo('<a href="#" class="h3">Все публикации</a>');
                 ?>
             </div>
     </div>
