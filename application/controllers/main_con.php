@@ -8,9 +8,8 @@ class main_con extends CI_Controller {
         $this->db->load->model('unews_model');
         $data['unews']=$this->unews_model->sel_grid_data();
         $this->load->view('index',$data);
-        
-        // $this->load->view('temp/footer');
-        // $this->load->view('temp/scripter');
+        $this->load->view('temp/indfooter');
+        $this->load->view('temp/scripter');
 
     }
 }

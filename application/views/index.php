@@ -95,8 +95,7 @@
                 <?php
                 
                 
-                // $count = $result->num_rows;
-                // while($row = $result->fetch_array()){
+                
                 //     $img = base64_encode($row['uphotonews']);
                 //     echo('<form method="POST" action="unews.php" style="margin-bottom:1%;">
                 //     <input type="hidden" name="id" value="'.$row['id_unews'].'"></input>');
@@ -233,5 +232,3 @@
             <amp-img class="" src="img/mountains-no-sky-sharpened.png" width="1600" height="254" layout="responsive"></amp-img><!--/files/mountains-no-sky-sharpened.png-->
         </div>
 </div>
-</body>
-</html>
