@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сайт исправлять</title>
-    
     <link rel="stylesheet" href="<?php echo base_url();?>/public/css/cdncss/brands.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/fontawesome.css" integrity="sha384-sri+NftO+0hcisDKgr287Y/1LVnInHJ1l+XC7+FOabmTTIK0HnE2ID+xxvJ21c5J" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/bootstrap-grid.css">
-    <link rel="stylesheet" href="css/bootstrap-reboot.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>/public/css/cdncss/fontawesome.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>/public/css/bootstrap.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>/public/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>/public/css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>/public/css/style.css">
     <style amp-boilerplate="">body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}
     @-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
     @-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
